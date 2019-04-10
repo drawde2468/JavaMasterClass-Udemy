@@ -66,6 +66,40 @@ public class Main {
             System.out.println("Greater than second top score and less than 100");
         }
 
+        if((topScore > 90) || (secondTopScore <= 90)){
+            System.out.println("One of these tests is true");
+        }
+
+        int newValue = 50;
+        if(newValue ==50){
+            System.out.println("This is true");
+        }
+
+        boolean isCar = false;
+        if(isCar == true){
+            //Runs because isCar is being assigned true and its returning true
+            System.out.println("This is not supposed to happen");
+        }
+        isCar = true;
+
+        boolean wasCar = isCar ? true : false;
+        if(wasCar){
+            System.out.println("wasCar is true");
+        }
+
+        double firstNum = 20;
+        double secondNum = 80;
+        double mathNum = (firstNum + secondNum) * 25;
+        double remainderNum = mathNum % 40;
+        System.out.println("Total: " + mathNum);
+        System.out.println("Remainder: " + remainderNum);
+
+        if (remainderNum <= 20){
+            System.out.println("Total was over the limit");
+        }
+
+
+
 
     }
 }
