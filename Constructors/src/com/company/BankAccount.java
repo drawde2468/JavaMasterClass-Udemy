@@ -9,7 +9,11 @@ public class BankAccount {
     private String phoneNumber;
 
     public BankAccount() {
-        this(12345,100,"Default Name","Default Email", "Default Phone");
+        this(12345, 100, "Default Name", "Default Email", "Default Phone");
+    }
+
+    public BankAccount(String customerName, String email, String phoneNumber) {
+        this(12345, 200, customerName, email, phoneNumber);
     }
 
     public BankAccount(int accountNumber, double balance, String customerName, String email, String phoneNumber) {
