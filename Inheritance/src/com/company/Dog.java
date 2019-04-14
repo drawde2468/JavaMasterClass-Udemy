@@ -1,6 +1,6 @@
 package com.company;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
 
     private int eyes;
     private int legs;
@@ -8,7 +8,7 @@ public class Dog extends Animal{
     private int teeth;
     private String coat;
 
-    public Dog(String name, int size, int weight,int eyes, int legs, int tail, int teeth, String coat) {
+    public Dog(String name, int size, int weight, int eyes, int legs, int tail, int teeth, String coat) {
         super(name, 1, 1, size, weight);
         this.eyes = eyes;
         this.legs = legs;
@@ -18,7 +18,7 @@ public class Dog extends Animal{
     }
 
 
-    private void chew(){
+    private void chew() {
         System.out.println("dog.chew() called");
     }
 
@@ -27,5 +27,24 @@ public class Dog extends Animal{
         System.out.println("dog.eat() called");
         chew();
         super.eat();
+    }
+
+    public void walk() {
+        move(5);
+    }
+
+    public void run() {
+        move(10);
+    }
+
+    public void moveLegs(int speed) {
+        System.out.println("Dog.moveLegs() called");
+    }
+
+    @Override
+    public void move(int speed) {
+        System.out.println("Dog.move() called");
+        moveLegs(speed);
+        super.move(speed);
     }
 }
